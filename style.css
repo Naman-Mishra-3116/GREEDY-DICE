@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+body {
+  height: 100vh;
+  position: relative;
+  background: linear-gradient(to top left, #753682 0%, #bf2e34 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+}
+.container {
+  width: 100rem;
+  height: calc(100vh - 20rem);
+  background-color: rgba(255, 255, 0, 0.497);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  box-shadow: 4px 4px 3.2rem rgba(28, 5, 5, 0.777);
+  border-radius: 1.1rem;
+  position: relative;
+}
+
+.new-game {
+  position: absolute;
+  left: 50%;
+  display: inline-block;
+  top: 6rem;
+  transform: translate(-50%, -50%);
+}
+.roll-dice {
+  position: absolute;
+  display: inline-block;
+  left: 50%;
+  top: 65%;
+  transform: translate(-50%, -50%);
+  width: 15rem;
+}
+
+.hold {
+  position: absolute;
+  left: 50%;
+  display: inline-block;
+  top: 80%;
+  transform: translate(-50%, -50%);
+  width: 15rem;
+}
+
+.btn {
+  background-color: rgba(255, 255, 255, 0.741);
+  padding: 1.5rem 3rem;
+  border: none;
+  border-radius: 1.5rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.left {
+  background-color: #bd7a93;
+  border-radius: 1.1rem;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  padding: 9rem;
+  text-align: center;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.right {
+  background-color: #bd7a93;
+  border-radius: 1.1rem;
+  border-top-left-radius: 0rem;
+  border-bottom-left-radius: 0rem;
+  padding: 9rem;
+  text-align: center;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+h1 {
+  font-size: 4.2rem;
+  margin-bottom: 1rem;
+  font-weight: 400;
+  transition: transform 0.3s ease;
+  color: #333;
+}
+
+h1:hover {
+  transform: scaleY(1.1);
+}
+
+.score-left,
+.score-right {
+  color: #bf2e34;
+  font-size: 8rem;
+  font-weight: 300;
+  margin-bottom: 0px;
+}
+
+.current {
+  background-color: #e84b50;
+  color: white;
+  font-size: 2rem;
+  border-radius: 1.1rem;
+  padding: 3rem 6rem;
+  align-self: center;
+}
+
+.current-para {
+  margin-bottom: 1rem;
+}
+
+.current-score-left {
+  font-size: 3rem;
+}
+
+.current-score-right {
+  font-size: 3rem;
+}
+
+.btn:hover {
+  background-color: #bf2e34;
+  color: white;
+}
+
+.dice-img {
+  height: 9rem;
+  width: 9rem;
+  border-radius: 1.1rem;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 2px 2px 3.2rem rgba(0, 0, 0, 0.488);
+}
+
+.hidden {
+  display: none;
+}
+
+.active {
+  background-color: #dbaebb;
+}
+
+.disable {
+  pointer-events: none;
+}
+
+.winner {
+  background-color: green;
+  animation-name: stars;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+
+}
